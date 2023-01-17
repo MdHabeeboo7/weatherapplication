@@ -2,15 +2,14 @@
 const bodyParser = require("body-parser");
 const { render } = require("ejs");
 const express = require("express")
-var requests= require("requests");
+const path = require('path');
 var request= require("request");
 const app = express()
 const PORT =process.env.PORT || 4000
 const apikey = "2633fa48f537ad55f4b39af6e402c84e";
 app.use(express.urlencoded({extended:false}))
 app.set('view engine','ejs')
-app.set('views', './var/tasks/views/')
-
+app.set('views', path.join(__dirname, './var/tasks/views'))
 app.use(express.static('public'))
 app.get('/',(req,res)=>{
   res.render('index',{weather:null,error:null,title:"City",count:"Country",tempmin:"min temp",tempmax:"max temp",tempstatus: null})
