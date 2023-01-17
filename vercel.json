@@ -1,6 +1,6 @@
 {
   "version": 2,
   "name": "weather",
-  "builds": [{ "src": "src/app.js", "use": "@vercel/node" }],
-  "routes": [{ "src": "/(.*)", "dest": "src/app.js" }]
+  "builds": [{ "src": "index.js", "use": "@vercel/node" }],
+  "routes": [{ "src": "/(.*)", "dest": "index.js" }]
 }
