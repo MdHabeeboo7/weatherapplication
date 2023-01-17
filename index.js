@@ -9,7 +9,7 @@ const PORT =process.env.PORT || 4000
 const apikey = "2633fa48f537ad55f4b39af6e402c84e";
 app.use(express.urlencoded({extended:false}))
 app.set('view engine','ejs')
-app.set('views', './var/tasks/views')
+app.set('views', './var/tasks/views/')
 
 app.use(express.static('public'))
 app.get('/',(req,res)=>{
