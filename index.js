@@ -10,7 +10,7 @@ const apikey = "2633fa48f537ad55f4b39af6e402c84e";
 app.use(express.urlencoded({extended:false}))
 app.set('view engine','ejs')
 app.set('views', path.join(__dirname, './var/tasks/views'))
-app.use(express.static('public'))
+app.use(express.static(path.join(__dirname,'public')))
 app.get('/',(req,res)=>{
   res.render('index',{weather:null,error:null,title:"City",count:"Country",tempmin:"min temp",tempmax:"max temp",tempstatus: null})
 })
